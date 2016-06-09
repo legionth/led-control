@@ -1,0 +1,29 @@
+{% set formName = "start" %}
+{% set pagetitle = "Start" %}
+{% extends "form.html.twig" %}
+
+{% block form %}
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="17" ng-model="ledActivate">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" ng-click="activate()"> Activate </button>
+      </span>
+    </div>
+    
+    <br>
+    
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="17" ng-model="ledDeactivate">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" ng-click="deactivate()"> Deactivate </button>
+      </span>
+    </div>
+{% endblock %}
+
+{# remove form buttons #}
+{% block form_buttons %}
+{% endblock %}
+
+{% block footer %}
+    <script src="js/start.js"></script>
+{% endblock %}
