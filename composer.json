@@ -1,0 +1,12 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"LedControl\\Service\\" : "src/service"
+		}
+	},
+	"require" : {
+		"twig/twig" : "~1.0",
+		"slim/slim" : "~2.0",
+		"justinrainbow/json-schema" : "~1.3"
+	}
+}
