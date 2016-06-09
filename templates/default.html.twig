@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+{% set basepath = '../' %}
+<head>
+<meta charset="utf-8">
+
+<link href="{{ basepath }}bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Optionales Theme -->
+<link href="{{ basepath }}bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!-- Custom CSS -->
+
+<title>{{ pagetitle }}</title>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ basepath }}start"> Rapsberry LED control </a>
+            </div>
+        </div>
+        <!-- /.navbar-header -->
+    </nav>
+
+    <div id="wrapper">
+        <!-- no container inside sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+
+            </ul>
+        </div>
+        <!-- /.sidebar -->
+
+        <div id="page-content-wrapper">
+            <div class="container">
+                {% block content %}
+                Content of the page...
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+<!-- jQuery -->
+<script src="{{ basepath }}bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{ basepath }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AngularJS -->
+<script src="{{ basepath }}bower_components/angular/angular.min.js"></script>
+
+
+{% block footer %}
+{% endblock %}
+
+</body>
+</html>

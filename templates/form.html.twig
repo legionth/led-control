@@ -1,0 +1,26 @@
+{% extends "default.html.twig" %}
+{% block content %}
+
+<div class="row" ng-app="{{ formName }}" ng-controller="{{ formName }}Controller">
+    <div class="col-md-10">
+        <form ng-submit="save()" name="form">
+
+            {% block form %}{% endblock %}
+
+            {% verbatim %}
+            <div ng-if="error" class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                <strong>Error:</strong>
+                {{ error }}
+            </div>
+            {% endverbatim %}
+
+{% block form_buttons %}
+    <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid || $pending">Speichern</button>
+{% endblock %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
